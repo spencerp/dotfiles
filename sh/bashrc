@@ -23,11 +23,19 @@ uri () {
   # shellcheck disable=SC2016
   echo "$1" | ruby -p -e 'require "uri";$_=URI.encode($_.strip)'
 }
-
+function parse_git_branch {
+  git branch --no-color 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/(\1)/'
+}
+function style_cmd_line {
+  local  PURPLE="\[\033[0;35m\]"
+  local  NO_COLOR="\[\033[00m\]"
+  local  GRAY="\[\033[0;90m\]"
+  export PS1="\n$PURPLE\u@\h$NO_COLOR:\w$GRAY\$(parse_git_branch)$NO_COLOR\nλ "
+}
 # Bash-specific
 if [ ! -z "$BASH_VERSION" ]; then
   shopt -s histappend
-  export PS1='\n\[\033[0;35m\]\u@\h\[\033[00m\]:\w \nλ '
+  style_cmd_line
 fi
 
 source "$HOME/dotfiles/sh/local.sh"
