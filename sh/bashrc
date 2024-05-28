@@ -27,7 +27,7 @@ function parse_git_branch {
   git branch --no-color 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/(\1)/'
 }
 function gcr {
-  git checkout staging && git pull
+  git checkout main && git pull
 }
 function style_cmd_line {
   local  PURPLE="\[\033[0;35m\]"
