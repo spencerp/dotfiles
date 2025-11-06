@@ -27,7 +27,7 @@ PROMPT='\
 λ%f '
 
 # Fish-style autosuggestions
-source ~/dotfiles/extern/zsh-autosuggestions/zsh-autosuggestions.zsh
+# source ~/spencerp/dotfiles/extern/zsh-autosuggestions/zsh-autosuggestions.zsh
 ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=241'
 
 # settings
@@ -44,7 +44,7 @@ zstyle ':vcs_info:(sv[nk]|bzr):*' branchformat '%b%F{1}:%F{3}%r'
 # completions
 zstyle ':completion:*' menu select
 zstyle ':completion:*:*:*:*:processes' command "ps -u $USER -o pid,user,comm -w -w"
-fpath=($HOME/dotfiles/extern/zsh-completions/src $fpath)
+fpath=($HOME/spencerp/dotfiles/extern/zsh-completions/src $fpath)
 
 # Help command
 autoload -Uz run-help
@@ -69,3 +69,7 @@ bindkey -M vicmd v edit-command-line
 
 # bindings
 bindkey '^R' 'history-incremental-search-backward'
+
+gcr() {
+    git checkout main && git pull && git checkout -
+}
