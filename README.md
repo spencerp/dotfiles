@@ -1,6 +1,6 @@
 In `~/.bashrc`:
 ```
-DOTFILES=~/dotfiles/sh/bashrc
+DOTFILES=~/spencerp/dotfiles/sh/bashrc
 
 # Reference custom dotfiles
 if [ -f $DOTFILES ]; then
@@ -18,10 +18,19 @@ fi
 
 In `~/.zshrc`:
 ```
-DOTFILES=~/dotfiles/sh/zshrc
+DOTFILES=~/spencerp/dotfiles/sh/zshrc
 
 # Reference custom dotfiles
 if [ -f $DOTFILES ]; then
         . $DOTFILES
 fi
 ```
+
+## Git Configuration
+
+To apply the gitconfig globally:
+```bash
+git config --global include.path ~/spencerp/dotfiles/git/gitconfig
+```
+
+This will include the custom git configuration (aliases, push settings, LFS filters) in your global git config.
