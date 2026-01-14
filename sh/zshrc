@@ -73,3 +73,8 @@ bindkey '^R' 'history-incremental-search-backward'
 gcr() {
     git checkout main && git pull && git checkout -
 }
+
+gcm() {
+    git checkout main && git pull
+}
+
