@@ -42,6 +42,10 @@ alias hu='hg update'
 alias hgresolvetheirs='hg resolve -t internal:other --all'
 alias hgresolveyours='hg resolve -t internal:local --all'
 
+# find
+fd() { find . -name "*$1*"; }
+gp() { xargs grep -l "$1"; }
+
 # python
 alias p='python'
 alias json='python -m json.tool'
