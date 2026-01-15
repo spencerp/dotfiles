@@ -5,8 +5,8 @@ export_path() {
   export "$1=$2"
 }
 
-source "$HOME/dotfiles/sh/variables.sh"
-source "$HOME/dotfiles/sh/aliases.sh"
+source "$HOME/spencerp/dotfiles/sh/variables.sh"
+source "$HOME/spencerp/dotfiles/sh/aliases.sh"
 
 set -o vi
 
@@ -41,7 +41,7 @@ if [ ! -z "$BASH_VERSION" ]; then
   style_cmd_line
 fi
 
-if [ -f "$HOME/dotfiles/sh/local.sh" ]; then
-  source "$HOME/dotfiles/sh/local.sh"
+if [ -f "$HOME/spencerp/dotfiles/sh/local.sh" ]; then
+  source "$HOME/spencerp/dotfiles/sh/local.sh"
 fi
-source "$HOME/dotfiles/sh/z.sh"
+source "$HOME/spencerp/dotfiles/sh/z.sh"
