@@ -44,7 +44,11 @@ alias hgresolveyours='hg resolve -t internal:local --all'
 
 # find
 fd() { find . -name "*$1*"; }
-gp() { xargs grep -l "$1"; }
+xg() { xargs grep -l "$1"; }
+
+# git functions
+gcr() { git checkout main && git pull && git checkout -; }
+gcm() { git checkout main && git pull; }
 
 # python
 alias p='python'

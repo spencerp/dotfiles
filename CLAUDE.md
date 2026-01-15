@@ -19,6 +19,6 @@ Personal shell configuration and dotfiles.
 | `d` | `docker` | Docker shorthand |
 | `a` | `atom` | Atom editor |
 | `fd <pattern>` | `find . -name "*$1*"` | Find files matching pattern |
-| `... \| gp <text>` | `xargs grep -l "$1"` | Grep piped files for text |
+| `... \| xg <text>` | `xargs grep -l "$1"` | Grep piped files for text |
 
-Example: `fd yaml_gen | gp DocProc` - Find files with "yaml_gen" in name that contain "DocProc"
+Example: `fd yaml_gen | xg DocProc` - Find files with "yaml_gen" in name that contain "DocProc"

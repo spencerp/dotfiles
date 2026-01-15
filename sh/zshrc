@@ -70,11 +70,3 @@ bindkey -M vicmd v edit-command-line
 # bindings
 bindkey '^R' 'history-incremental-search-backward'
 
-gcr() {
-    git checkout main && git pull && git checkout -
-}
-
-gcm() {
-    git checkout main && git pull
-}
-
